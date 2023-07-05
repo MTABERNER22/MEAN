@@ -1,0 +1,14 @@
+<mat-card class="dashboard-card" >
+  <mat-card-header>
+    <mat-card-title class="title">{{ data.title }}</mat-card-title>
+    <mat-card-subtitle>{{ data.price | currency : "ARS" }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content class="dashboard-card-content">
+  <img mat-card-image src="{{ data.thumbnail }}" alt="Photo of a Shiba Inu" />
+  <mat-card-actions>
+    <button mat-raised-button color="warn" routerLink="/producto/{{ data.id }}" class="boton" >Ver Detalle</button>
+  </mat-card-actions>
+</mat-card-content>
+</mat-card>
+
+

@@ -1,0 +1,110 @@
+img {
+  width: 100%;
+  height: 100%;
+
+}
+
+.title {
+  white-space: nowrap;
+  margin: 0 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.boton {
+  margin: auto;
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+.dashboard-card {
+  position: absolute;
+}
+
+.dashboard-card-content {
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media(min-width: 480px){
+  .dashboard-card-content {
+    width: 150px;
+    height: 150px;
+  }
+
+  .dashboard-card {
+    top: 40px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .title {
+    width: 150px;
+  }
+  
+}
+
+@media(min-width: 600px){
+
+  .dashboard-card-content {
+    width: 130px;
+  }
+
+  .dashboard-card {
+    left: 10px;
+    right: 10px;
+  }
+
+  .title {
+    width: 130px;
+  }
+
+}
+
+@media(min-width: 668px){
+  .dashboard-card-content {
+    width: 150px;
+  }
+  .dashboard-card {
+    left: 20px;
+    right: 20px;
+  }
+  .title {
+    width: 230px;
+  }
+}
+
+@media(min-width: 768px){
+
+  .dashboard-card {
+    left: 40px;
+    right: 40px;
+  }
+  .title {
+    width: 250px;
+  }
+  
+}
+
+
+@media(min-width: 992px){
+
+  .dashboard-card {
+    left: 50px;
+    right: 50px;
+  }
+}
+
+@media(min-width: 1200px) {
+  .dashboard-card {
+    left: 90px;
+    right: 90px;
+  }
+
+  .title {
+    width: 300px;
+  }
+
+}
+

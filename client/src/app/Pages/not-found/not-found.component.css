@@ -1,0 +1,14 @@
+*{
+    min-height: 80vh;
+    display:flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.notFound{
+    font-size: 50px;
+ 
+
+}
+

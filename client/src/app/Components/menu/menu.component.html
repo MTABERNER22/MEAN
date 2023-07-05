@@ -1,0 +1,49 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <mat-toolbar class="containerLogo">
+      <div class="logo">
+        <img src="../../../assets/img/sillon.png" width="60" height="50" alt="">
+        <p class="tituloPagina">A L M A C E N D E M U E B L E S </p>
+      </div>
+    </mat-toolbar>
+    <mat-nav-list>
+      <mat-list-item class="link" routerLink="/home">
+        <mat-icon matListItemIcon>home</mat-icon>
+        <div matListItemTitle class="mat-list-item">H O M E </div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item class="link" routerLink="/nosotros"  >
+        <mat-icon matListItemIcon>people</mat-icon>
+        <div matListItemTitle class="mat-list-item">Nosotros</div>
+      </mat-list-item>
+      <mat-list-item class="link" routerLink="/alta" *ngIf="!isLogin">
+        <mat-icon matListItemIcon>person_add</mat-icon>
+        <div matListItemTitle class="mat-list-item">R E G I S T R A T E</div>
+      </mat-list-item>
+      <mat-list-item class="link" routerLink="/login" *ngIf="!isLogin">
+        <mat-icon matListItemIcon>login</mat-icon>
+        <div matListItemTitle class="mat-list-item">I N G R E S A R</div>
+      </mat-list-item>
+      <mat-list-item class="link" (click)="logout()" *ngIf="isLogin">
+        <mat-icon matListItemIcon>logout</mat-icon>
+        <div class="salir" matListItemTitle>S A L I R</div>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content >
+    <mat-toolbar color="warn" style="height: 40px;" >
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <div class="tituloMenu">
+      <p> A L M A C É N </p>
+      <p class="de"> D E </p>
+      <p> M U E B L E S </p>
+    </div> 
+    </mat-toolbar>
+    <router-outlet  ></router-outlet>
+    <app-footer ></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>
